@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="hu">
+	<head>
+		<meta charset="utf-8">
+		<title>Mikszáth Kálmán Líceum</title>
+		<link rel="stylesheet" href="css/mixat.css">
+		<script src="js/mixat.js"></script>
+		<meta name="robots" content="noindex, nofollow" />
+		<style type="text/css">
+		body {
+			font-size: 21px;
+		}
+			#site-title {
+				font-size: 72px;
+			}
+			header {
+				/*position: fixed;
+				width: 100%;
+				height: 80%;*/
+				background-image: url(assets/chalkboard.jpg);
+				box-shadow: 0 0 100px #000 inset;
+				background-size: 100%;
+				font-family: 'Fredericka the Great', cursive;
+				color: #fff;
+				padding: 70px 0;
+				font-size: 36px;
+				border-bottom: 10px solid #2B2B2B;
+			}
+			.navbar-default {
+				background-image: url(assets/chalkboard.jpg);
+				box-shadow: 0 0 100px #000 inset;
+				background-size: 100%;
+				font-family: 'Fredericka the Great', cursive;
+				border: none;
+			}
+			header .row {
+				display: flex;
+			}
+			header .row > * {
+				align-items: center;
+			}
+			#site-content {
+				/*position: absolute;
+				top:80%;
+				width: 100%;*/
+				background-image: url(http://img06.deviantart.net/49d3/i/2010/245/0/c/pinboard_texture_by_nikky81-d2xuip9.png);
+				box-shadow: 0 0 100px #000 inset;
+				padding: 70px 0;
+			}
+			.social {
+				display: inline-block;
+				background-image: url(assets/social.png);
+				width: 50px;
+				height: 50px;
+				background-size: auto 100%;
+			}
+			.social-twitter {
+				background-position: top center;
+			}
+			.social-youtube {
+				background-position: top right;
+			}
+			.note > div {
+				/*background-image: url(assets/note.png);*/
+				background-color: #fff;
+				padding: 20px 10px 10px 50px;
+				box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+				position: relative;
+			}
+			.note > div::before {
+				position: absolute;
+				width: 35px;
+				height: 35px;
+				top: -5px;
+				left:50%;
+				background-image: url(assets/pins.png);
+				background-size: auto 100%;
+			}
+			.thumbnail {
+				padding: 0;
+			}
+			.note > div .thumbnail {
+				margin-left: -40px;
+			}
+			.note.pin-red > div::before {
+				background-position: -35px 0;
+			}
+			.note.pin-yellow > div::before {
+				background-position: -70px 0;
+			}
+			.note h3 {
+				margin-top: 10px;
+			}
+			h2 {
+				/*background-image: url(assets/teared.png);*/
+				background-color: #2b2b2b;
+				background-size: 100% 100%;
+				padding-left: 20px;
+				padding-right: 20px;
+				color: #fff;
+				text-shadow: 1px 0 0 #fff;
+				box-shadow: 0 3px 6px #000;
+				text-align: center;
+			}
+		</style>
+		<script type="text/javascript">
+			var pins = ['pin-red', 'pin-green', 'pin-yellow']
+			$(document).ready(function(e) {
+				$('.note').each(function() {
+					$(this).addClass(pins[Math.floor(Math.random()*pins.length)]);
+					$(this).children('div').css('transform','rotate('+(Math.random()*4-2)+'deg)');
+					$(this).children('div').css('left',(Math.random()*10-5)+'px');
+					$(this).children('div').css('top',(Math.random()*10-5)+'px');
+				})
+				$('.thumbnail').each(function() {
+					$(this).find('img').css('transform','rotate('+(Math.random()*4-2)+'deg)');
+				})
+				$('h2').each(function() {
+					$(this).css('transform','rotate('+(Math.random()*4-2)+'deg)');
+				})
+			})
+		</script>
+	</head>
+	<body>
+			<!--START HEADER-->
+			<header>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2 hidden-xs">
+							<img src="assets/mikszathk.png" class="img-responsive" />
+						</div>
+						<div class="col-md-10">
+							<div id="site-title">Mikszáth Kálmán Líceum</div>
+							<div class="row">
+								<div class="col-sm-6">
+									<p>Rákóczi utca 1.<br />Pásztó, 3060</p>
+								</div>
+								<div class="col-sm-6">
+									<p>mikszath@mixat.hu<br />(+36) 32/460-791</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-offset-2 col-md-10">
+							<ul class="list-inline">
+								<li>
+									<a href="#" class="social social-facebook">&nbsp;</a>
+								</li>
+								<li>
+									<a href="#" class="social social-twitter">&nbsp;</a>
+								</li>
+								<li>
+									<a href="#" class="social social-youtube">&nbsp;</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!--END HEADER-->
+		<!--START NAVBAR-->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<!--<a class="navbar-brand" href="#">Brand</a>-->
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="#">Iskolánk <span class="sr-only">(current)</span></a>
+						</li>
+						<li><a href="#">Diákok</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tanárok <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">One more separated link</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Bejelentkezés</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!--END NAVBAR-->
+		<div id="site-content">
+			<!--START CONTENT-->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8">
+						<!--START CAROUSEL-->
+						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner" role="listbox">
+								<div class="item active">
+									<img src="images/image1.jpg" alt="...">
+									<div class="carousel-caption">
+										<h3>
+											<span><span property="schema:name" data-quickedit-field-id="node/20/title/hu/carousel" class="quickedit-field">A diáknapról szakszerűen</span>
+											</span>
+										</h3>
+										<div class="hidden-xs">
+											<dl class="">
+												<dd>
+													<ul property="schema:text" data-quickedit-field-id="node/20/body/hu/carousel" class="field field--name-body field--type-text-with-summary field--label-hidden list-unstyled quickedit-field">
+														<li property="schema:text" class="field__item">
+															<p>Kaotikus pillanatokkal kezdődött az idei, nem túl szokványos diáknap.</p>
+														</li>
+													</ul>
+												</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<img src="images/image2.jpg" alt="...">
+									<div class="carousel-caption">
+										<h3>
+											<span><span property="schema:name" data-quickedit-field-id="node/20/title/hu/carousel" class="quickedit-field">A diáknapról szakszerűen</span>
+											</span>
+										</h3>
+										<div class="hidden-xs">
+											<dl class="">
+												<dd>
+													<ul property="schema:text" data-quickedit-field-id="node/20/body/hu/carousel" class="field field--name-body field--type-text-with-summary field--label-hidden list-unstyled quickedit-field">
+														<li property="schema:text" class="field__item">
+															<p>Kaotikus pillanatokkal kezdődött az idei, nem túl szokványos diáknap.</p>
+														</li>
+													</ul>
+												</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Controls -->
+							<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+							</a>
+							<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+							</a>
+						</div>
+						<!--END CAROUSEL-->
+            <!--START EVENTS-->
+            <div class="views-element-container" id="block-mixat-views-block-events-block-1">
+
+      <h2>Események</h2>
+
+      <div class="form-group"><div class="view view-events view-id-events view-display-id-block_1 js-view-dom-id-f84eb1fb527633e4ea33d9b70d4b29e03fd1a8fe04ee7c0cb2799f588b7be5c5">
+
+
+
+      <div class="view-content">
+      <div>
+
+  <ul class="list-unstyled row">
+
+          <li class="col-sm-6 note">
+  <div data-history-node-id="22" role="article" about="/mixat/node/22" class="event teaser clearfix">
+
+
+    <h3>
+      <a href="/mixat/node/22" rel="bookmark">
+        <span>Egy másik teszt esemény</span>
+
+      </a>
+    </h3>
+
+
+
+    <div class="content">
+      <ul class="links inline list-inline"><li class="node-readmore"><a href="/mixat/node/22" rel="tag" title="Egy másik teszt esemény" hreflang="hu">Tovább <span class="visually-hidden">(Egy másik teszt esemény)</span></a></li></ul>
+<dl class="">
+
+
+  <dd>
+          <ul class="field field--name-field-event-start field--type-datetime field--label-hidden list-unstyled">
+                  <li class="field__item"><time datetime="2017-07-05T19:14:04Z">2017 július 5, szerda  21:14</time>
+</li>
+              </ul>
+      </dd>
+
+</dl>
+
+<dl class="">
+
+
+  <dd>
+          <ul class="field field--name-body field--type-text-with-summary field--label-hidden list-unstyled">
+                  <li class="field__item">Egy másik teszt esemény</li>
+              </ul>
+      </dd>
+
+</dl>
+
+    </div>
+  </div>
+
+</li>
+          <li class="col-sm-6 note">
+  <div data-history-node-id="19" role="article" about="/mixat/node/19" class="event teaser clearfix">
+
+
+    <h3>
+      <a href="/mixat/node/19" rel="bookmark">
+        <span>Teszt esemény</span>
+
+      </a>
+    </h3>
+
+
+
+    <div class="content">
+      <ul class="links inline list-inline"><li class="node-readmore"><a href="/mixat/node/19" rel="tag" title="Teszt esemény" hreflang="hu">Tovább <span class="visually-hidden">(Teszt esemény)</span></a></li></ul>
+<dl class="">
+
+
+  <dd>
+          <ul class="field field--name-field-event-start field--type-datetime field--label-hidden list-unstyled">
+                  <li class="field__item"><time datetime="2017-09-04T06:00:00Z">2017 szeptember 4, hétfő  08:00</time>
+</li>
+              </ul>
+      </dd>
+
+</dl>
+
+<dl class="">
+
+
+  <dd>
+          <ul class="field field--name-body field--type-text-with-summary field--label-hidden list-unstyled">
+                  <li class="field__item"><p>Ez egy tesz esemény, ne vedd komolyan</p></li>
+              </ul>
+      </dd>
+
+</dl>
+
+    </div>
+  </div>
+
+</li>
+
+  </ul>
+
+</div>
+
+    </div>
+
+          </div>
+</div>
+
+  </div>
+  <!--END EVENTS-->
+            <div class="row">
+              <div class="col-sm-6">
+								<div class="region region-sidebar-first">
+								    <div class="views-element-container" id="block-views-block-random-articles-block-1-2">
+
+
+								      <div class="form-group"><div class="view view-random-articles view-id-random_articles view-display-id-block_1 js-view-dom-id-fc4bd719791b8ecbb2a4b8eda6785617464262c8fb6b387aa8e72818aec0863b">
+
+
+
+								      <div class="view-content">
+								      <div class="item-list">
+
+								  <ul class="list-unstyled">
+
+								          <li class="note">
+								  <div data-history-node-id="1" role="article" about="/mixat/node/1" typeof="schema:Article" class="article is-promoted teaser clearfix">
+
+
+								    <h3>
+								      <a href="/mixat/node/1" rel="bookmark">
+								        <span property="schema:name">Egy hét Osterburkenben</span>
+
+								      </a>
+								    </h3>
+								      <span property="schema:name" content="Egy hét Osterburkenben" class="hidden"></span>
+
+
+								          <p class="node-meta"><strong>Líceum </strong> | <span property="schema:dateCreated" content="2016-10-01T15:47:35+00:00">2016 október 1, szombat</span>
+								</p>
+
+								    <div class="content">
+
+								<dl class="">
+
+
+								  <dd>
+								          <ul property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden list-unstyled">
+								                  <li property="schema:text" class="field__item"><p>Az iskoláink (Mikszáth Kálmán Líceum – Ganztagsgymnasium Osterburken) között majd 20 éve meglévő cserekapcsolat jóvoltából 13 diák és 2 kísérőtanár</p></li>
+								              </ul>
+								      </dd>
+
+								</dl>
+
+								    </div>
+								  </div>
+
+								</li>
+								          <li class="note">
+								  <div data-history-node-id="20" role="article" about="/mixat/node/20" typeof="schema:Article" class="article is-promoted is-sticky teaser clearfix">
+
+
+								    <h3>
+								      <a href="/mixat/node/20" rel="bookmark">
+								        <span property="schema:name">A diáknapról szakszerűen</span>
+
+								      </a>
+								    </h3>
+								      <span property="schema:name" content="A diáknapról szakszerűen" class="hidden"></span>
+
+
+								          <p class="node-meta"><strong>Líceum </strong> | <span property="schema:dateCreated" content="2017-06-14T15:02:36+00:00">2017 június 14, szerda</span>
+								</p>
+
+								    <div class="content">
+
+								<dl class="">
+
+
+								  <dd>
+								                            <p class="field__item thumbnail">  <a href="/mixat/node/20"><img property="schema:image" src="/mixat/sites/default/files/styles/gallery/public/2017-06/19250555_1428221723883867_8808071038104798715_o.jpg?itok=G_ZpoP0l" width="1024" height="576" alt="A diáknapról szakszerűen" typeof="foaf:Image" class="img-responsive">
+
+								</a>
+								</p>
+								                    </dd>
+
+								</dl>
+
+								<dl class="">
+
+
+								  <dd>
+								          <ul property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden list-unstyled">
+								                  <li property="schema:text" class="field__item"><p>Kaotikus pillanatokkal kezdődött az idei, nem túl szokványos diáknap.</p></li>
+								              </ul>
+								      </dd>
+
+								</dl>
+
+								    </div>
+								  </div>
+
+								</li>
+								          <li class="note">
+								  <div data-history-node-id="16" role="article" about="/mixat/node/16" typeof="schema:Article" class="article is-promoted teaser clearfix">
+
+
+								    <h3>
+								      <a href="/mixat/node/16" rel="bookmark">
+								        <span property="schema:name">Heinrich Heinrichsen látogatása iskolánkban</span>
+
+								      </a>
+								    </h3>
+								      <span property="schema:name" content="Heinrich Heinrichsen látogatása iskolánkban" class="hidden"></span>
+
+
+								          <p class="node-meta"><strong>Líceum </strong> | <span property="schema:dateCreated" content="2017-05-19T09:51:12+00:00">2017 május 19, péntek</span>
+								</p>
+
+								    <div class="content">
+
+								<dl class="">
+
+
+								  <dd>
+								          <ul property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden list-unstyled">
+								                  <li property="schema:text" class="field__item">Intézményünkbe látogatott Heinrich Heinrichsen, a külföldi oktatási ügyek budapesti koordinátora, német nyelvi tanácsadója</li>
+								              </ul>
+								      </dd>
+
+								</dl>
+
+								    </div>
+								  </div>
+
+								</li>
+								          <li class="note">
+								  <div data-history-node-id="21" role="article" about="/mixat/node/21" typeof="schema:Article" class="article is-promoted is-sticky teaser clearfix">
+
+
+								    <h3>
+								      <a href="/mixat/node/21" rel="bookmark">
+								        <span property="schema:name">"The Challange Day"</span>
+
+								      </a>
+								    </h3>
+								      <span property="schema:name" content="&quot;The Challange Day&quot;" class="hidden"></span>
+
+
+								          <p class="node-meta"><strong>Líceum </strong> | <span property="schema:dateCreated" content="2017-06-08T11:15:46+00:00">2017 június 8, csütörtök</span>
+								</p>
+
+								    <div class="content">
+
+								<dl class="">
+
+
+								  <dd>
+								                            <p class="field__item thumbnail">  <a href="/mixat/node/21"><img property="schema:image" src="/mixat/sites/default/files/styles/gallery/public/2017-06/19054968_1416230071749699_8435531642781619761_o.jpg?itok=abTYXIHw" width="1024" height="576" alt="The Challange Day" typeof="foaf:Image" class="img-responsive">
+
+								</a>
+								</p>
+								                    </dd>
+
+								</dl>
+
+								<dl class="">
+
+
+								  <dd>
+								          <ul property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden list-unstyled">
+								                  <li property="schema:text" class="field__item">Iskolánkban ma rendezték meg azt a labdarúgó-mérkőzést</li>
+								              </ul>
+								      </dd>
+
+								</dl>
+
+								    </div>
+								  </div>
+
+								</li>
+								          <li class="note">
+								  <div data-history-node-id="17" role="article" about="/mixat/node/17" typeof="schema:Article" class="article is-promoted teaser clearfix">
+
+
+								    <h3>
+								      <a href="/mixat/node/17" rel="bookmark">
+								        <span property="schema:name">Felvételi információ</span>
+
+								      </a>
+								    </h3>
+								      <span property="schema:name" content="Felvételi információ" class="hidden"></span>
+
+
+								          <p class="node-meta"><strong>Líceum </strong> | <span property="schema:dateCreated" content="2017-04-19T09:57:48+00:00">2017 április 19, szerda</span>
+								</p>
+
+								    <div class="content">
+
+								<dl class="">
+
+
+								  <dd>
+								          <ul property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden list-unstyled">
+								                  <li property="schema:text" class="field__item">Az alábbiakban közöljük az iskolánkba, a 2017/2018-es tanévre jelentkezett tanulók felvételi eljárás során kialakult sorrendjét</li>
+								              </ul>
+								      </dd>
+
+								</dl>
+
+								    </div>
+								  </div>
+
+								</li>
+
+								  </ul>
+
+								</div>
+
+								    </div>
+
+								          </div>
+								</div>
+
+								  </div>
+
+								  </div>
+              </div>
+              <div class="col-sm-6">
+								<div class="region region-sidebar-first">
+    <div class="views-element-container" id="block-views-block-random-articles-block-1-2">
+
+      <h2>Véletlen cikkek</h2>
+
+      <div class="form-group"><div class="view view-random-articles view-id-random_articles view-display-id-block_1 js-view-dom-id-fc4bd719791b8ecbb2a4b8eda6785617464262c8fb6b387aa8e72818aec0863b">
+
+
+
+      <div class="view-content">
+      <div class="item-list">
+
+  <ul class="list-unstyled">
+
+          <li class="note">
+  <div data-history-node-id="1" role="article" about="/mixat/node/1" typeof="schema:Article" class="article is-promoted teaser clearfix">
+
+
+    <h3>
+      <a href="/mixat/node/1" rel="bookmark">
+        <span property="schema:name">Egy hét Osterburkenben</span>
+
+      </a>
+    </h3>
+      <span property="schema:name" content="Egy hét Osterburkenben" class="hidden"></span>
+
+
+          <p class="node-meta"><strong>Líceum </strong> | <span property="schema:dateCreated" content="2016-10-01T15:47:35+00:00">2016 október 1, szombat</span>
+</p>
+
+    <div class="content">
+
+<dl class="">
+
+
+  <dd>
+          <ul property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden list-unstyled">
+                  <li property="schema:text" class="field__item"><p>Az iskoláink (Mikszáth Kálmán Líceum – Ganztagsgymnasium Osterburken) között majd 20 éve meglévő cserekapcsolat jóvoltából 13 diák és 2 kísérőtanár</p></li>
+              </ul>
+      </dd>
+
+</dl>
+
+    </div>
+  </div>
+
+</li>
+          <li class="note">
+  <div data-history-node-id="20" role="article" about="/mixat/node/20" typeof="schema:Article" class="article is-promoted is-sticky teaser clearfix">
+
+
+    <h3>
+      <a href="/mixat/node/20" rel="bookmark">
+        <span property="schema:name">A diáknapról szakszerűen</span>
+
+      </a>
+    </h3>
+      <span property="schema:name" content="A diáknapról szakszerűen" class="hidden"></span>
+
+
+          <p class="node-meta"><strong>Líceum </strong> | <span property="schema:dateCreated" content="2017-06-14T15:02:36+00:00">2017 június 14, szerda</span>
+</p>
+
+    <div class="content">
+
+<dl class="">
+
+
+  <dd>
+                            <p class="field__item thumbnail">  <a href="/mixat/node/20"><img property="schema:image" src="/mixat/sites/default/files/styles/gallery/public/2017-06/19250555_1428221723883867_8808071038104798715_o.jpg?itok=G_ZpoP0l" width="1024" height="576" alt="A diáknapról szakszerűen" typeof="foaf:Image" class="img-responsive">
+
+</a>
+</p>
+                    </dd>
+
+</dl>
+
+<dl class="">
+
+
+  <dd>
+          <ul property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden list-unstyled">
+                  <li property="schema:text" class="field__item"><p>Kaotikus pillanatokkal kezdődött az idei, nem túl szokványos diáknap.</p></li>
+              </ul>
+      </dd>
+
+</dl>
+
+    </div>
+  </div>
+
+</li>
+          <li class="note">
+  <div data-history-node-id="16" role="article" about="/mixat/node/16" typeof="schema:Article" class="article is-promoted teaser clearfix">
+
+
+    <h3>
+      <a href="/mixat/node/16" rel="bookmark">
+        <span property="schema:name">Heinrich Heinrichsen látogatása iskolánkban</span>
+
+      </a>
+    </h3>
+      <span property="schema:name" content="Heinrich Heinrichsen látogatása iskolánkban" class="hidden"></span>
+
+
+          <p class="node-meta"><strong>Líceum </strong> | <span property="schema:dateCreated" content="2017-05-19T09:51:12+00:00">2017 május 19, péntek</span>
+</p>
+
+    <div class="content">
+
+<dl class="">
+
+
+  <dd>
+          <ul property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden list-unstyled">
+                  <li property="schema:text" class="field__item">Intézményünkbe látogatott Heinrich Heinrichsen, a külföldi oktatási ügyek budapesti koordinátora, német nyelvi tanácsadója</li>
+              </ul>
+      </dd>
+
+</dl>
+
+    </div>
+  </div>
+
+</li>
+          <li class="note">
+  <div data-history-node-id="21" role="article" about="/mixat/node/21" typeof="schema:Article" class="article is-promoted is-sticky teaser clearfix">
+
+
+    <h3>
+      <a href="/mixat/node/21" rel="bookmark">
+        <span property="schema:name">"The Challange Day"</span>
+
+      </a>
+    </h3>
+      <span property="schema:name" content="&quot;The Challange Day&quot;" class="hidden"></span>
+
+
+          <p class="node-meta"><strong>Líceum </strong> | <span property="schema:dateCreated" content="2017-06-08T11:15:46+00:00">2017 június 8, csütörtök</span>
+</p>
+
+    <div class="content">
+
+<dl class="">
+
+
+  <dd>
+                            <p class="field__item thumbnail">  <a href="/mixat/node/21"><img property="schema:image" src="/mixat/sites/default/files/styles/gallery/public/2017-06/19054968_1416230071749699_8435531642781619761_o.jpg?itok=abTYXIHw" width="1024" height="576" alt="The Challange Day" typeof="foaf:Image" class="img-responsive">
+
+</a>
+</p>
+                    </dd>
+
+</dl>
+
+<dl class="">
+
+
+  <dd>
+          <ul property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden list-unstyled">
+                  <li property="schema:text" class="field__item">Iskolánkban ma rendezték meg azt a labdarúgó-mérkőzést</li>
+              </ul>
+      </dd>
+
+</dl>
+
+    </div>
+  </div>
+
+</li>
+          <li class="note">
+  <div data-history-node-id="17" role="article" about="/mixat/node/17" typeof="schema:Article" class="article is-promoted teaser clearfix">
+
+
+    <h3>
+      <a href="/mixat/node/17" rel="bookmark">
+        <span property="schema:name">Felvételi információ</span>
+
+      </a>
+    </h3>
+      <span property="schema:name" content="Felvételi információ" class="hidden"></span>
+
+
+          <p class="node-meta"><strong>Líceum </strong> | <span property="schema:dateCreated" content="2017-04-19T09:57:48+00:00">2017 április 19, szerda</span>
+</p>
+
+    <div class="content">
+
+<dl class="">
+
+
+  <dd>
+          <ul property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden list-unstyled">
+                  <li property="schema:text" class="field__item">Az alábbiakban közöljük az iskolánkba, a 2017/2018-es tanévre jelentkezett tanulók felvételi eljárás során kialakult sorrendjét</li>
+              </ul>
+      </dd>
+
+</dl>
+
+    </div>
+  </div>
+
+</li>
+
+  </ul>
+
+</div>
+
+    </div>
+
+          </div>
+</div>
+
+  </div>
+
+  </div>
+              </div>
+            </div>
+					</div>
+					<div class="col-md-4">
+						<div class="region region-sidebar-first">
+    <div class="views-element-container" id="block-views-block-random-articles-block-1-2">
+
+      <h2>Véletlen cikkek</h2>
+
+      <div class="form-group"><div class="view view-random-articles view-id-random_articles view-display-id-block_1 js-view-dom-id-fc4bd719791b8ecbb2a4b8eda6785617464262c8fb6b387aa8e72818aec0863b">
+
+
+
+      <div class="view-content">
+      <div class="item-list">
+
+  <ul class="list-unstyled">
+
+          <li class="note">
+  <div data-history-node-id="1" role="article" about="/mixat/node/1" typeof="schema:Article" class="article is-promoted teaser clearfix">
+
+
+    <h3>
+      <a href="/mixat/node/1" rel="bookmark">
+        <span property="schema:name">Egy hét Osterburkenben</span>
+
+      </a>
+    </h3>
+      <span property="schema:name" content="Egy hét Osterburkenben" class="hidden"></span>
+
+
+          <p class="node-meta"><strong>Líceum </strong> | <span property="schema:dateCreated" content="2016-10-01T15:47:35+00:00">2016 október 1, szombat</span>
+</p>
+
+    <div class="content">
+
+<dl class="">
+
+
+  <dd>
+          <ul property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden list-unstyled">
+                  <li property="schema:text" class="field__item"><p>Az iskoláink (Mikszáth Kálmán Líceum – Ganztagsgymnasium Osterburken) között majd 20 éve meglévő cserekapcsolat jóvoltából 13 diák és 2 kísérőtanár</p></li>
+              </ul>
+      </dd>
+
+</dl>
+
+    </div>
+  </div>
+
+</li>
+          <li class="note">
+  <div data-history-node-id="20" role="article" about="/mixat/node/20" typeof="schema:Article" class="article is-promoted is-sticky teaser clearfix">
+
+
+    <h3>
+      <a href="/mixat/node/20" rel="bookmark">
+        <span property="schema:name">A diáknapról szakszerűen</span>
+
+      </a>
+    </h3>
+      <span property="schema:name" content="A diáknapról szakszerűen" class="hidden"></span>
+
+
+          <p class="node-meta"><strong>Líceum </strong> | <span property="schema:dateCreated" content="2017-06-14T15:02:36+00:00">2017 június 14, szerda</span>
+</p>
+
+    <div class="content">
+
+<dl class="">
+
+
+  <dd>
+                            <p class="field__item thumbnail">  <a href="/mixat/node/20"><img property="schema:image" src="/mixat/sites/default/files/styles/gallery/public/2017-06/19250555_1428221723883867_8808071038104798715_o.jpg?itok=G_ZpoP0l" width="1024" height="576" alt="A diáknapról szakszerűen" typeof="foaf:Image" class="img-responsive">
+
+</a>
+</p>
+                    </dd>
+
+</dl>
+
+<dl class="">
+
+
+  <dd>
+          <ul property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden list-unstyled">
+                  <li property="schema:text" class="field__item"><p>Kaotikus pillanatokkal kezdődött az idei, nem túl szokványos diáknap.</p></li>
+              </ul>
+      </dd>
+
+</dl>
+
+    </div>
+  </div>
+
+</li>
+          <li class="note">
+  <div data-history-node-id="16" role="article" about="/mixat/node/16" typeof="schema:Article" class="article is-promoted teaser clearfix">
+
+
+    <h3>
+      <a href="/mixat/node/16" rel="bookmark">
+        <span property="schema:name">Heinrich Heinrichsen látogatása iskolánkban</span>
+
+      </a>
+    </h3>
+      <span property="schema:name" content="Heinrich Heinrichsen látogatása iskolánkban" class="hidden"></span>
+
+
+          <p class="node-meta"><strong>Líceum </strong> | <span property="schema:dateCreated" content="2017-05-19T09:51:12+00:00">2017 május 19, péntek</span>
+</p>
+
+    <div class="content">
+
+<dl class="">
+
+
+  <dd>
+          <ul property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden list-unstyled">
+                  <li property="schema:text" class="field__item">Intézményünkbe látogatott Heinrich Heinrichsen, a külföldi oktatási ügyek budapesti koordinátora, német nyelvi tanácsadója</li>
+              </ul>
+      </dd>
+
+</dl>
+
+    </div>
+  </div>
+
+</li>
+          <li class="note">
+  <div data-history-node-id="21" role="article" about="/mixat/node/21" typeof="schema:Article" class="article is-promoted is-sticky teaser clearfix">
+
+
+    <h3>
+      <a href="/mixat/node/21" rel="bookmark">
+        <span property="schema:name">"The Challange Day"</span>
+
+      </a>
+    </h3>
+      <span property="schema:name" content="&quot;The Challange Day&quot;" class="hidden"></span>
+
+
+          <p class="node-meta"><strong>Líceum </strong> | <span property="schema:dateCreated" content="2017-06-08T11:15:46+00:00">2017 június 8, csütörtök</span>
+</p>
+
+    <div class="content">
+
+<dl class="">
+
+
+  <dd>
+                            <p class="field__item thumbnail">  <a href="/mixat/node/21"><img property="schema:image" src="/mixat/sites/default/files/styles/gallery/public/2017-06/19054968_1416230071749699_8435531642781619761_o.jpg?itok=abTYXIHw" width="1024" height="576" alt="The Challange Day" typeof="foaf:Image" class="img-responsive">
+
+</a>
+</p>
+                    </dd>
+
+</dl>
+
+<dl class="">
+
+
+  <dd>
+          <ul property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden list-unstyled">
+                  <li property="schema:text" class="field__item">Iskolánkban ma rendezték meg azt a labdarúgó-mérkőzést</li>
+              </ul>
+      </dd>
+
+</dl>
+
+    </div>
+  </div>
+
+</li>
+          <li class="note">
+  <div data-history-node-id="17" role="article" about="/mixat/node/17" typeof="schema:Article" class="article is-promoted teaser clearfix">
+
+
+    <h3>
+      <a href="/mixat/node/17" rel="bookmark">
+        <span property="schema:name">Felvételi információ</span>
+
+      </a>
+    </h3>
+      <span property="schema:name" content="Felvételi információ" class="hidden"></span>
+
+
+          <p class="node-meta"><strong>Líceum </strong> | <span property="schema:dateCreated" content="2017-04-19T09:57:48+00:00">2017 április 19, szerda</span>
+</p>
+
+    <div class="content">
+
+<dl class="">
+
+
+  <dd>
+          <ul property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden list-unstyled">
+                  <li property="schema:text" class="field__item">Az alábbiakban közöljük az iskolánkba, a 2017/2018-es tanévre jelentkezett tanulók felvételi eljárás során kialakult sorrendjét</li>
+              </ul>
+      </dd>
+
+</dl>
+
+    </div>
+  </div>
+
+</li>
+
+  </ul>
+
+</div>
+
+    </div>
+
+          </div>
+</div>
+
+  </div>
+
+  </div>
+					</div>
+				</div>
+			</div>
+			<!--END CONTENT-->
+		</div>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+footer {
+  background-color: @gray-base;
+  padding-top: @line-height-computed*2;
+  padding-bottom: @line-height-computed*2;
+  margin-top: @line-height-computed*2;
+  border-top: 5px solid @brand-primary;
+  color: @brand-white;
+
+  a {
+    //font-weight: bold;
+    color: lighten(@brand-primary, 26%);
+    &:hover,
+    &:focus {
+      color: lighten(@brand-primary, 13%);
+    }
+  }
+
+  .nav > li > a:hover, .nav > li > a:focus  {
+    background-color: transparent;
+  }
+}
+.views-row {
+  h3 {
+    margin-top: 0;
+  }
+  .node-meta {
+    background-image: url('../assets/primary-stripe.png');
+    background-repeat: repeat-y;
+    padding-left: 20px;
+  } 
+}
+#search-block-form .form-actions {
+  display: none;
+}
+
+.node-meta {
+  background-image: url('../assets/primary-stripe.png');
+  background-repeat: repeat-y;
+  padding-left: 20px;
+}
+
+@media (min-width: @screen-sm-min) {
+  .text-right-sm {
+    text-align: right;
+  }
+  article .field--name-body {
+    font-size: 21px;
+    line-height: 1.5;
+  }
+}
